@@ -2,7 +2,7 @@ package pattern_builder;
 
 /**
  * Create by SunnyDay on 2019/03/03
- * 测试类，用来测试我们的Builder设计模式
+ * 测试类，用来测试我们的代码
  */
 public class Test {
     public static void main(String[] args) {
@@ -10,6 +10,14 @@ public class Test {
         builderModeDemo();
         builderMode();
         flat();
+
+        BungalowBuilder builder = new BungalowBuilder();
+        House house = builder
+                .makeFloor()
+                .makeRoof()
+                .makeWall()
+                .getHouse();
+        System.out.println("链式调用："+house.toString());
 
     }
 
@@ -56,28 +64,22 @@ public class Test {
 
     /**
      * 使用builder模式
-     * <p>
-     * 缺点：用户还需要调用工程队（builder.makeXXX()），让工程队来修。
      */
     private static void builderMode() {
 
         HouseBuilder builder = new BungalowBuilder();// 平房工程队
         HouseDirector houseDirector = new HouseDirector(builder);//  设计指导师指导完成
         houseDirector.makeHouse();// 指导师干活
-        // 查看 修建的房子（产品）
+        // 用户查看 修建的房子（产品）
         House house = builder.getHouse();//其实House类应该隐藏 不能让用户直接使用（new），通过相关的builder提供实例
         System.out.println(house.toString());
 
-        /*
-         * 缺点：用户还需要指导工程队来修，在自己查看产品
-         *
-         * */
     }
 
-    public static  void flat() {
-        HouseBuilder builder = new FlatBuilder();
-        HouseDirector director = new HouseDirector(builder);
-        director.makeHouse();
+    private static void flat() {
+        HouseBuilder builder = new FlatBuilder();//建造者
+        HouseDirector director = new HouseDirector(builder);//指导者
+        director.makeHouse();//指导者工作
         House house = builder.getHouse();
         System.out.println(house.toString());
     }

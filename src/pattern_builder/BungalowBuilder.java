@@ -9,18 +9,21 @@ public class BungalowBuilder implements HouseBuilder {
     private House house = new House();
 
     @Override
-    public void makeFloor() {
+    public HouseBuilder makeFloor() {
       house.setFloor("平房地板");
+      return this;
     }
 
     @Override
-    public void makeWall() {
+    public HouseBuilder makeWall() {
     house.setWall("平房墙");
+        return this;
     }
 
     @Override
-    public void makeRoof() {
+    public HouseBuilder makeRoof() {
      house.setRoof("平房屋顶");
+        return this;
     }
 
     /**

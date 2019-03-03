@@ -6,18 +6,21 @@ package pattern_builder;
 public class FlatBuilder implements HouseBuilder {
     private  House house = new House();
     @Override
-    public void makeFloor() {
+    public HouseBuilder makeFloor() {
         house.setFloor("公寓地板");
+        return this;
     }
 
     @Override
-    public void makeWall() {
+    public HouseBuilder makeWall() {
      house.setWall("公寓墙");
+        return this;
     }
 
     @Override
-    public void makeRoof() {
+    public HouseBuilder makeRoof() {
         house.setRoof("公寓屋顶");
+        return this;
     }
 
     @Override

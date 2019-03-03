@@ -7,8 +7,8 @@ package pattern_builder;
  *
  */
 public interface HouseBuilder {
-    void makeFloor();
-    void makeWall();
-    void makeRoof();
+    HouseBuilder makeFloor();
+    HouseBuilder makeWall();
+    HouseBuilder makeRoof();
     House getHouse();//  Product
 }
