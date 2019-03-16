@@ -5,3 +5,7 @@
 0 [面向对象的六大设计原则](https://blog.csdn.net/qq_38350635/article/details/88541282)
 
 1 [建造者模式（builder）](https://blog.csdn.net/qq_38350635/article/details/88094656)
+
+2[工厂设计模式](https://blog.csdn.net/qq_38350635/article/details/88594159)
+
+
