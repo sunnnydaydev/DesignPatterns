@@ -10,6 +10,6 @@
 
 3[装饰者设计模式（decorator）](https://blog.csdn.net/qq_38350635/article/details/89075079)
 
-
+4[单例设计模式（singleton）](https://blog.csdn.net/qq_38350635/article/details/89109802)
 
 
