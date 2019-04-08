@@ -4,8 +4,12 @@
 
 0 [面向对象的六大设计原则](https://blog.csdn.net/qq_38350635/article/details/88541282)
 
-1 [建造者模式（builder）](https://blog.csdn.net/qq_38350635/article/details/88094656)
+1 [建造者设计模式（builder）](https://blog.csdn.net/qq_38350635/article/details/88094656)
 
 2[工厂设计模式（factory）](https://blog.csdn.net/qq_38350635/article/details/88594159)
+
+3[装饰者设计模式（decorator）](https://blog.csdn.net/qq_38350635/article/details/89075079)
+
+4[单例设计模式（singleton）](https://blog.csdn.net/qq_38350635/article/details/89109802)
 
 
