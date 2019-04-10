@@ -12,4 +12,6 @@
 
 4[单例设计模式（singleton）](https://blog.csdn.net/qq_38350635/article/details/89109802)
 
+5[观察者设计模式（Observer）](https://blog.csdn.net/qq_38350635/article/details/89195121)
+
 
