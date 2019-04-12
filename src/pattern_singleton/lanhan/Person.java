@@ -4,7 +4,7 @@ package pattern_singleton.lanhan;
  * Create by SunnyDay on 2019/04/08
  */
 public class Person {
-    private static Person person;
+    private volatile static Person person;
 
     private Person() {
     }
