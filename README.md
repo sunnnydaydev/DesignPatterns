@@ -14,4 +14,4 @@
 
 5[观察者设计模式（Observer）](https://blog.csdn.net/qq_38350635/article/details/89195121)
 
-
+6[代理设计模式（Proxy）](https://blog.csdn.net/qq_38350635/article/details/89302130)
