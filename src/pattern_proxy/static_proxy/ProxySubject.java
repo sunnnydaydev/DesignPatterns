@@ -17,16 +17,22 @@ public class ProxySubject implements Subject {
      */
     @Override
     public void sailBook() {
+        // 行驶被代理类的功能前后同时再做点其他功能
         dazhe();
         subject.sailBook();
         give();
 
     }
 
+    /**
+     * 打折，代理类添加的小功能
+     * */
     private void dazhe() {
         System.out.println("卖书吗？书打折");
     }
-
+    /**
+     * 送优惠券，代理类添加的小功能
+     * */
     private void give() {
         System.out.println("给你代金券");
     }
