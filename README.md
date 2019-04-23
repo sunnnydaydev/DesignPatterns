@@ -17,3 +17,5 @@
 6[代理设计模式（Proxy）](https://blog.csdn.net/qq_38350635/article/details/89302130)
 
 7[UML类图介绍（Uml）](https://blog.csdn.net/qq_38350635/article/details/89421846)
+
+8[适配器设计模式（Adapter）](https://blog.csdn.net/qq_38350635/article/details/89478771)
