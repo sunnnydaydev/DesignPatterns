@@ -1,3 +1,5 @@
+# code here
+
 # DesignPatterns
 
 >本项目是设计模式学习总结，持续更新！！！
