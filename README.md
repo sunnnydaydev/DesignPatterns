@@ -1,7 +1,7 @@
 
 # DesignPatterns
 
-本Project为设计模式学习总结。
+设计模式学习总结。
 
 [code here](https://github.com/sunnnydaydev/ReViewDesignPatterns)
 
@@ -48,7 +48,7 @@
 
 [面向对象的六大设计原则](https://blog.csdn.net/qq_38350635/article/details/88541282)
 
-[UML类图介绍（Uml）](https://blog.csdn.net/qq_38350635/article/details/89421846)
+[UML类图](https://blog.csdn.net/qq_38350635/article/details/89421846)
 
 1-[建造者设计模式（builder）](https://blog.csdn.net/qq_38350635/article/details/88094656)
 
