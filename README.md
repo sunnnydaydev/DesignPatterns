@@ -1,13 +1,11 @@
 
 # DesignPatterns
 
-设计模式学习总结。
+设计模式总结代码提交与此。文章参看[这里](https://blog.csdn.net/qq_38350635/category_8718811.html?spm=1001.2014.3001.5482)。
 
-[code here](https://github.com/sunnnydaydev/ReViewDesignPatterns)
+# 设计模式分类
 
-# 分类
-
-根据功能划分可以分为三类：
+设计模式根据功能划分可以分为三类：
 
 ###### 创建型模式
 - 抽象工厂模式(Abstract Factory)
@@ -43,23 +41,3 @@
 - 模板方法模式(Template Method)
 - 访问者模式(Visitor)
 
-
-# 文章总结 
-
-[面向对象的六大设计原则](https://blog.csdn.net/qq_38350635/article/details/88541282)
-
-[UML类图](https://blog.csdn.net/qq_38350635/article/details/89421846)
-
-1-[建造者设计模式（builder）](https://blog.csdn.net/qq_38350635/article/details/88094656)
-
-2-[工厂设计模式（factory）](https://blog.csdn.net/qq_38350635/article/details/88594159)
-
-3-[装饰者设计模式（decorator）](https://blog.csdn.net/qq_38350635/article/details/89075079)
-
-4-[单例设计模式（singleton）](https://blog.csdn.net/qq_38350635/article/details/89109802)
-
-5-[观察者设计模式（Observer）](https://blog.csdn.net/qq_38350635/article/details/89195121)
-
-6-[代理设计模式（Proxy）](https://blog.csdn.net/qq_38350635/article/details/89302130)
-
-7-[适配器设计模式（Adapter）](https://blog.csdn.net/qq_38350635/article/details/89478771)
