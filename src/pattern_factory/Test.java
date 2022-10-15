@@ -1,11 +1,13 @@
 package pattern_factory;
 
+import pattern_factory.abstract_factory.DarkRyeBreadFactory;
 import pattern_factory.abstract_factory.MailSendFactory;
 import pattern_factory.abstract_factory.Provider;
 import pattern_factory.abstract_factory.SmsSendFactory;
-import pattern_factory.factory_method.MoreSendFactory;
-import pattern_factory.factory_method.Sender;
-import pattern_factory.factory_method.SimpleSendFactory;
+import pattern_factory.base.Bread;
+import pattern_factory.more_factory.MoreSendFactory;
+import pattern_factory.base.Sender;
+import pattern_factory.common_factory.CommonSendFactory;
 import pattern_factory.factory_method.StaticSendFactory;
 
 /**
@@ -15,7 +17,7 @@ public class Test {
     public static void main(String[] args) {
         System.out.println("工厂方法模式三种类型:");
         System.out.println("1、普通工厂模式:");
-        SimpleSendFactory simpleSendFactory = new SimpleSendFactory();
+        CommonSendFactory simpleSendFactory = new CommonSendFactory();
         simpleSendFactory.produce("mail").send();
         simpleSendFactory.produce("sms").send();
         // simpleSendFactory.produce("haha").send();  异常类型演示
@@ -26,16 +28,17 @@ public class Test {
         System.out.println("3、静态工厂模式:");
         StaticSendFactory.produceMail().send();
         StaticSendFactory.produceSms().send();
-
         System.out.println("抽象工厂：");
-        // 完整写法
-        Provider provider = new MailSendFactory();
-        Sender sender = provider.produce();
+        // 抽象工厂：以Mail为栗子。
+        Provider mailProvider = new MailSendFactory();
+        Sender sender = mailProvider.produceMessage();
         sender.send();
+        //抽象工厂：以DarkRyeBread为栗子。
+        Provider darkRyeProvider = new DarkRyeBreadFactory();
+        Bread bread =darkRyeProvider.produceBread();
+        bread.bread();
          //简写
-        new SmsSendFactory().produce().send();
-
-        // 抽象工厂进行了两次多态的调用
-
+//        new SmsSendFactory().produceMessage().send();
+//        new DarkRyeBreadFactory().produceBread().bread();
     }
 }

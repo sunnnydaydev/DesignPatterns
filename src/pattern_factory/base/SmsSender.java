@@ -1,4 +1,4 @@
-package pattern_factory.factory_method;
+package pattern_factory.base;
 
 /**
  * Create by SunnyDay on 2019/03/16

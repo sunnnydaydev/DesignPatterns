@@ -1,5 +1,9 @@
 package pattern_factory.factory_method;
 
+import pattern_factory.base.MailSender;
+import pattern_factory.base.Sender;
+import pattern_factory.base.SmsSender;
+
 /**
  * Create by SunnyDay on 2019/03/16
  * 静态工厂：吧多个工厂的方法加上static 关键字 使他们都边城静态方法

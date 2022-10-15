@@ -1,4 +1,8 @@
-package pattern_factory.factory_method;
+package pattern_factory.more_factory;
+
+import pattern_factory.base.MailSender;
+import pattern_factory.base.Sender;
+import pattern_factory.base.SmsSender;
 
 /**
  * Create by SunnyDay on 2019/03/16
