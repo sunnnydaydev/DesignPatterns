@@ -7,12 +7,12 @@ import java.lang.reflect.Method;
 
 /**
  * Create by SunnyDay on 2019/04/14
- * 动态代理类：需要实现JDK#InvocationHandler接口
+ * 工具类：需要实现JDK#InvocationHandler接口
  */
-public class PressProxy implements InvocationHandler {
+public class PressProxyHandler implements InvocationHandler {
     private final Subject subject;
 
-    public PressProxy(Subject subject) {
+    public PressProxyHandler(Subject subject) {
         this.subject = subject;
     }
 

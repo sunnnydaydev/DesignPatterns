@@ -1,8 +1,7 @@
 package pattern_proxy;
 
-import pattern_proxy.auto_proxy.PressProxy;
+import pattern_proxy.auto_proxy.PressProxyHandler;
 import pattern_proxy.static_proxy.Press;
-import pattern_proxy.static_proxy.ProxySubject;
 import pattern_proxy.static_proxy.Subject;
 
 import java.lang.reflect.Proxy;
@@ -12,8 +11,8 @@ import java.lang.reflect.Proxy;
  */
 public class Test {
     public static void main(String[] args) {
-        PressProxy myHandler = new PressProxy(new Press());
-        Subject subjectProxy = (Subject) Proxy.newProxyInstance(Press.class.getClassLoader(), Press.class.getInterfaces(), myHandler);
-        subjectProxy.sailBook();
+        PressProxyHandler handler = new PressProxyHandler(new Press());
+        Subject press = (Subject) Proxy.newProxyInstance(Press.class.getClassLoader(), Press.class.getInterfaces(), handler);
+        press.sailBook();
     }
 }
