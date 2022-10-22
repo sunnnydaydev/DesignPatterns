@@ -5,9 +5,8 @@ package pattern_proxy.static_proxy;
  * 代理类
  */
 public class ProxySubject implements Subject {
-    private Subject subject;//传被代理类对象引用
+    private final Subject subject;//持有被代理类对象引用
 
-    //这里使用setter也行，不一定使用构造
     public ProxySubject(Subject subject) {
         this.subject = subject;
     }
@@ -17,23 +16,21 @@ public class ProxySubject implements Subject {
      */
     @Override
     public void sailBook() {
-        // 行驶被代理类的功能前后同时再做点其他功能
-        dazhe();
+        discount();
         subject.sailBook();
         give();
-
     }
 
     /**
-     * 打折，代理类添加的小功能
+     * 打折
      * */
-    private void dazhe() {
-        System.out.println("卖书吗？书打折");
+    private void discount() {
+        System.out.println("打折券一张");
     }
     /**
-     * 送优惠券，代理类添加的小功能
+     * 赠品
      * */
     private void give() {
-        System.out.println("给你代金券");
+        System.out.println("买书赠品一个");
     }
 }

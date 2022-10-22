@@ -5,5 +5,5 @@ package pattern_proxy.static_proxy;
  *  接口（功能抽象而来）
  */
 public interface Subject {
-    void sailBook();//卖书
+    void sailBook();
 }
