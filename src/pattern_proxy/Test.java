@@ -1,6 +1,8 @@
 package pattern_proxy;
 
 import pattern_proxy.auto_proxy.PressProxyHandler;
+import pattern_proxy.cglib.NovelPress;
+import pattern_proxy.cglib.ProxyHelper;
 import pattern_proxy.static_proxy.Press;
 import pattern_proxy.static_proxy.Subject;
 
@@ -14,6 +16,9 @@ public class Test {
         PressProxyHandler handler = new PressProxyHandler(new Press());
         Subject press = (Subject) Proxy.newProxyInstance(Press.class.getClassLoader(), Press.class.getInterfaces(), handler);
         press.sailBook();
+        // test cglib
+        NovelPress novelPressProxyObject = new ProxyHelper(new NovelPress()).getNovelProxyObject();
+        novelPressProxyObject.sailBook();
     }
 }
 
