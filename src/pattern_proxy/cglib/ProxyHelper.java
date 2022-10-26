@@ -13,15 +13,14 @@ import java.lang.reflect.Method;
 public class ProxyHelper {
     private NovelPress mNovelPress;
 
-    public ProxyHelper(NovelPress novelPress) {
-        mNovelPress = novelPress;
-    }
+    public ProxyHelper() {}
 
     /**
      * 获取 NovelPress 类的代理类对象。
      * 为啥返回值是NovelPress类型？因为cglib中代理类是目标类的子类。（就是这样设计的，就如jdk的动态代理只能对接口实现类进行代理一样）
      */
     public NovelPress getNovelProxyObject() {
+        mNovelPress = new NovelPress();
         Enhancer enhancer = new Enhancer(); // cglib 使用这个类
         enhancer.setSuperclass(NovelPress.class);
         enhancer.setCallback(new MethodInterceptor() {

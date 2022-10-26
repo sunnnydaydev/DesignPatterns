@@ -1,20 +1,20 @@
 package pattern_proxy.auto_proxy;
 
+import pattern_proxy.static_proxy.Press;
 import pattern_proxy.static_proxy.Subject;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
 
 /**
  * Create by SunnyDay on 2019/04/14
  * 工具类：需要实现JDK#InvocationHandler接口
  */
 public class PressProxyHandler implements InvocationHandler {
-    private final Subject subject;
+    private  Subject subject;
 
-    public PressProxyHandler(Subject subject) {
-        this.subject = subject;
-    }
+    public PressProxyHandler() {}
 
     /**
      * @param proxy   代理对象，一般我们这里不用。
@@ -25,6 +25,7 @@ public class PressProxyHandler implements InvocationHandler {
      * */
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        subject = new Press();
         Object result;
         discount();
         result = method.invoke(subject);//执行被代理的方法。这里需要个被代理对象。
@@ -38,5 +39,12 @@ public class PressProxyHandler implements InvocationHandler {
 
     private void give() {
         System.out.println("买书送圆珠笔一支");
+    }
+
+    /**
+     * 获取代理对象
+     * */
+    public Subject getPressProxy(){
+      return (Subject) Proxy.newProxyInstance(Press.class.getClassLoader(), Press.class.getInterfaces(), this);
     }
 }

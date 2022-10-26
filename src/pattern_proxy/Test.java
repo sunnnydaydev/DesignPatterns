@@ -12,15 +12,29 @@ import java.lang.reflect.Proxy;
  * Create by SunnyDay on 2019/04/14
  */
 public class Test {
+
+    /**
+     PressProxyHandler#getPressProxy方法
+
+     public Subject getPressProxy(){
+        return (Subject) Proxy.newProxyInstance(
+                Press.class.getClassLoader(),
+                Press.class.getInterfaces(),
+                this);
+    }
+     */
+
     public static void main(String[] args) {
-        PressProxyHandler handler = new PressProxyHandler(new Press());
-        Subject press = (Subject) Proxy.newProxyInstance(Press.class.getClassLoader(), Press.class.getInterfaces(), handler);
+        PressProxyHandler handler = new PressProxyHandler();
+        Subject press = handler.getPressProxy();
         press.sailBook();
-        // test cglib
-        NovelPress novelPressProxyObject = new ProxyHelper(new NovelPress()).getNovelProxyObject();
+
+        //test cglib
+        NovelPress novelPressProxyObject = new ProxyHelper().getNovelProxyObject();
         novelPressProxyObject.sailBook();
     }
 }
+
 
 /**
  *  public static Object newProxyInstance(ClassLoader loader,

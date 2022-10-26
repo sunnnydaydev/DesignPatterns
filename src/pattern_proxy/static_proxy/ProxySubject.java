@@ -5,10 +5,10 @@ package pattern_proxy.static_proxy;
  * 代理类
  */
 public class ProxySubject implements Subject {
-    private final Subject subject;//持有被代理类对象引用
+    private  Subject subject;
 
-    public ProxySubject(Subject subject) {
-        this.subject = subject;
+    public ProxySubject() {
+
     }
 
     /**
@@ -16,6 +16,7 @@ public class ProxySubject implements Subject {
      */
     @Override
     public void sailBook() {
+        subject = new Press();
         discount();
         subject.sailBook();
         give();
