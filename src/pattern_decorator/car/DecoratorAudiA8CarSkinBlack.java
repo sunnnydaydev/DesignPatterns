@@ -2,7 +2,7 @@ package pattern_decorator.car;
 
 /**
  * Create by SunnyDay on 2019/04/07
- * 装饰者
+ * 装饰者:黑车膜的奥迪
  */
 public class DecoratorAudiA8CarSkinBlack extends Decorator {
 
