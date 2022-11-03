@@ -16,7 +16,7 @@ public class Test {
                 .makeFloor()
                 .makeRoof()
                 .makeWall()
-                .getHouse();
+                .create();
         System.out.println("链式调用："+house.toString());
 
     }
@@ -53,7 +53,7 @@ public class Test {
         builder.makeRoof();
         builder.makeWall();
         // 查看 修建的房子（产品）
-        House house = builder.getHouse();//其实House类应该隐藏 不能让用户直接使用（new），通过相关的builder提供实例
+        House house = builder.create();//其实House类应该隐藏 不能让用户直接使用（new），通过相关的builder提供实例
         System.out.println(house.toString());
 
         /*
@@ -71,7 +71,7 @@ public class Test {
         HouseDirector houseDirector = new HouseDirector(builder);//  设计指导师指导完成
         houseDirector.makeHouse();// 指导师干活
         // 用户查看 修建的房子（产品）
-        House house = builder.getHouse();//其实House类应该隐藏 不能让用户直接使用（new），通过相关的builder提供实例
+        House house = builder.create();//其实House类应该隐藏 不能让用户直接使用（new），通过相关的builder提供实例
         System.out.println(house.toString());
 
     }
@@ -80,7 +80,7 @@ public class Test {
         HouseBuilder builder = new FlatBuilder();//建造者
         HouseDirector director = new HouseDirector(builder);//指导者
         director.makeHouse();//指导者工作
-        House house = builder.getHouse();
+        House house = builder.create();
         System.out.println(house.toString());
     }
 }

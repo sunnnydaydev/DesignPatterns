@@ -30,7 +30,7 @@ public class BungalowBuilder implements HouseBuilder {
      * 外界使用
      * */
     @Override
-    public House getHouse() {
+    public House create() {
         return house;
     }
 }

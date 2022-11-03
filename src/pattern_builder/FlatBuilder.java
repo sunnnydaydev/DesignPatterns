@@ -24,7 +24,7 @@ public class FlatBuilder implements HouseBuilder {
     }
 
     @Override
-    public House getHouse() {
+    public House create() {
         return house;
     }
 }

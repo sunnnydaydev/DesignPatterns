@@ -10,5 +10,5 @@ public interface HouseBuilder {
     HouseBuilder makeFloor();
     HouseBuilder makeWall();
     HouseBuilder makeRoof();
-    House getHouse();//  Product
+    House create();//  Product
 }
